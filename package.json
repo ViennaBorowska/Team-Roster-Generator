@@ -1,0 +1,26 @@
+{
+  "name": "team-roster-generator",
+  "version": "1.0.0",
+  "description": "A CLI that builds a HTML page of team roles and contact information.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViennaBorowska/Team-Roster-Generator.git"
+  },
+  "author": "vienna borowska",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViennaBorowska/Team-Roster-Generator/issues"
+  },
+  "homepage": "https://github.com/ViennaBorowska/Team-Roster-Generator#readme",
+  "dependencies": {
+    "enquirer": "^2.3.6"
+  }
+}
