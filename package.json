@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/ViennaBorowska/Team-Roster-Generator#readme",
   "dependencies": {
-    "enquirer": "^2.3.6"
+    "inquirer": "^8.2.0"
   }
 }

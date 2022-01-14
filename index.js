@@ -2,6 +2,9 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
+//File imports
+const generateRoster = require('./utils/generateHTML');
+
 //Global variables
 const myTeam = [];
 
@@ -173,3 +176,17 @@ const internQs = () => {
 };
 
 managerQs();
+
+function writeToFile(fileName, data) {
+  return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+}
+//Function to build ReadMe with user imput & confirm in terminal
+function init() {
+  inquirer.prompt(managerQs).then((answers) => {
+    console.log('Successfully created myTeam.html!');
+    writeToFile('Team-Roster/index.html', generateHTML({ ...answers }));
+  });
+}
+
+// Call to initialise function
+init();
