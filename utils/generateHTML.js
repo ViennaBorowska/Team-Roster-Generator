@@ -43,7 +43,7 @@ function getCards(team) {
 let getManagerCard = (Manager) => {
   return `
     <div class="card m-1 shadow" style="width: 18rem">
-      <div class='card-header'>
+      <div class='card-header bg-danger'>
         <h3 class="card-title">${Manager.getName()}</h3>
         <h6 class="card-text"><i class="fa fa-coffee"></i> ${Manager.getRole()}</h6>
       </div>
@@ -61,7 +61,7 @@ let getManagerCard = (Manager) => {
 let getEngineerCard = (Engineer) => {
   return `
     <div class="card m-1 shadow" style="width: 18rem">
-      <div class='card-header'>
+      <div class='card-header bg-success'>
         <h3 class="card-title">${Engineer.getName()}</h3>
         <h6 class="card-text"><i class="fa fa-laptop"></i> ${Engineer.getRole()}</h6>
       </div>
@@ -79,7 +79,7 @@ let getEngineerCard = (Engineer) => {
 let getInternCard = (Intern) => {
   return `
     <div class="card m-1 shadow" style="width: 18rem">
-      <div class='card-header'>
+      <div class='card-header bg-warning'>
         <h3 class="card-title">${Intern.getName()}</h3>
         <h6 class="card-text"><i class="fa fa-graduation-cap"></i> ${Intern.getRole()}</h6>
       </div>
@@ -108,7 +108,7 @@ function getTeam(team) {
     <title>My Team</title>
   </head>
   <body>
-  <div class="jumbotron jumbotron-fluid bg-warning">
+  <div class="jumbotron jumbotron-fluid bg-info">
     <div class="container">
       <h1 class="display-4 text-center">My Team</h1>
     </div>
