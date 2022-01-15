@@ -3,6 +3,9 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 
 //File imports
+const Manager = require('./lib/manager');
+const Engineer = require('./lib/engineer');
+const Intern = require('./lib/intern');
 const generateRoster = require('./utils/generateHTML');
 
 //Global variables
@@ -51,16 +54,16 @@ const managerQs = () => {
         managerAns.email,
         managerAns.officeNum
       );
-      team.push(manager);
+      myTeam.push(manager);
       switch (managerAns.newMember) {
         case 'Engineer':
-          engineerQuestions();
+          engineerQs();
           break;
         case 'Intern':
-          internQuestions();
+          internQs();
           break;
         default:
-          writeToFile('dist/index.html', generateTeam(myTeam));
+          writeToFile('Team-Roster/myTeam.html', generateRoster(myTeam));
       }
     });
 };
@@ -106,16 +109,16 @@ const engineerQs = () => {
         engineerAns.email,
         engineerAns.github
       );
-      team.push(engineer);
+      myTeam.push(engineer);
       switch (engineerAns.newMember) {
         case 'Engineer':
-          engineerQuestions();
+          engineerQs();
           break;
         case 'Intern':
-          internQuestions();
+          internQs();
           break;
         default:
-          writeToFile('/index.html', generateTeam(myTeam));
+          writeToFile('/myTeam.html', generateRoster(myTeam));
       }
     });
 };
@@ -161,32 +164,25 @@ const internQs = () => {
         internAns.email,
         internAns.school
       );
-      team.push(intern);
+      myTeam.push(intern);
       switch (internAns.newMember) {
         case 'Engineer':
-          engineerQuestions();
+          engineerQs();
           break;
         case 'Intern':
-          internQuestions();
+          internQs();
           break;
         default:
-          writeToFile('dist/index.html', generateTeam(myTeam));
+          writeToFile('Team-Roster/myTeam.html', generateRoster(myTeam));
       }
     });
 };
 
 managerQs();
 
-function writeToFile(fileName, data) {
-  return fs.writeFileSync(path.join(process.cwd(), fileName), data);
-}
-//Function to build ReadMe with user imput & confirm in terminal
-function init() {
-  inquirer.prompt(managerQs).then((answers) => {
-    console.log('Successfully created myTeam.html!');
-    writeToFile('Team-Roster/index.html', generateHTML({ ...answers }));
+function writeToFile(filename, data) {
+  fs.writeFile(filename, data, (err) => {
+    if (err) throw err;
+    console.log('file saved');
   });
 }
-
-// Call to initialise function
-init();
