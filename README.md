@@ -17,6 +17,7 @@ This project also contains tests for each constructor class.
 - Team-Roster - folder where generates HTML will be saved
 - utils > generateHTML.js - function to dynamically generate HTML page from user input
 - .gitignore > file to record local files that should not be uploaded to repository e.g. node_modules
+- EXAMPLE-ROSTER.html - example of a HTML page generated using this CLI
 - index.js > modules, packages, team role questions and writeToFile function
 - package-lock.json - node modules tree visiblity
 - package.json - node.js metadata
