@@ -6,7 +6,7 @@ const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-const generateRoster = require('./utils/generateHTML');
+const generateRoster = require('./src/generateHTML');
 
 //Global variables
 const myTeam = [];
@@ -63,7 +63,7 @@ const managerQs = () => {
           internQs();
           break;
         default:
-          writeToFile('Team-Roster/myTeam.html', generateRoster(myTeam));
+          writeToFile('dist/myTeam.html', generateRoster(myTeam));
       }
     });
 };
@@ -118,7 +118,7 @@ const engineerQs = () => {
           internQs();
           break;
         default:
-          writeToFile('/myTeam.html', generateRoster(myTeam));
+          writeToFile('/dist.html', generateRoster(myTeam));
       }
     });
 };
@@ -173,7 +173,7 @@ const internQs = () => {
           internQs();
           break;
         default:
-          writeToFile('Team-Roster/myTeam.html', generateRoster(myTeam));
+          writeToFile('dist/myTeam.html', generateRoster(myTeam));
       }
     });
 };
