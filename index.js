@@ -3,9 +3,9 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 
 //File imports
-const Manager = require('./lib/manager');
-const Engineer = require('./lib/engineer');
-const Intern = require('./lib/intern');
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
 const generateRoster = require('./utils/generateHTML');
 
 //Global variables
