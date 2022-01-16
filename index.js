@@ -20,21 +20,55 @@ const managerQs = () => {
         type: 'input',
         name: 'name',
         message: `What is the team manager's name?`,
+        validate: (userInput) => {
+          if (userInput.length >= 2) {
+            return true;
+          } else {
+            console.log(`Please enter the manager's name!`);
+            return false;
+          }
+        },
       },
       {
         type: 'input',
         name: 'id',
         message: `What is the team manager's id?`,
+        validate: (userInput) => {
+          if (userInput.length >= 1) {
+            return true;
+          } else {
+            console.log(`Please enter the manager's ID!`);
+            return false;
+          }
+        },
       },
       {
         type: 'input',
         name: 'email',
         message: `What is the team manager's email?`,
+        validate: (userInput) => {
+          if (userInput) {
+            return true;
+          } else {
+            console.log(`Please enter a valid e-mail address!`);
+            return false;
+          }
+        },
       },
       {
         type: 'input',
         name: 'officeNum',
         message: `What is the team manager's office number?`,
+        validate: (userInput) => {
+          if (userInput.length >= 11) {
+            return true;
+          } else {
+            console.log(
+              `Please enter a valid telephone number!(11 digits minimum, area code required)`
+            );
+            return false;
+          }
+        },
       },
       {
         type: 'list',
@@ -75,21 +109,53 @@ const engineerQs = () => {
         type: 'input',
         name: 'name',
         message: "What is the engineer's name?",
+        validate: (userInput) => {
+          if (userInput.length >= 2) {
+            return true;
+          } else {
+            console.log(`Please enter a name for the engineer!`);
+            return false;
+          }
+        },
       },
       {
         type: 'input',
         name: 'id',
         message: "What is the engineer's id?",
+        validate: (userInput) => {
+          if (userInput.length >= 1) {
+            return true;
+          } else {
+            console.log(`Please enter an ID for the engineer!`);
+            return false;
+          }
+        },
       },
       {
         type: 'input',
         name: 'email',
         message: "What is the engineer's email address?",
+        validate: (userInput) => {
+          if (userInput) {
+            return true;
+          } else {
+            console.log(`Please enter a valid e-mail address!`);
+            return false;
+          }
+        },
       },
       {
         type: 'input',
         name: 'github',
         message: "What is the engineer's GitHub username?",
+        validate: (userInput) => {
+          if (userInput.length >= 1) {
+            return true;
+          } else {
+            console.log(`Please enter a GitHub username for the engineer!`);
+            return false;
+          }
+        },
       },
       {
         type: 'list',
@@ -130,21 +196,55 @@ const internQs = () => {
         type: 'input',
         name: 'name',
         message: "What is the intern's name?",
+        validate: (userInput) => {
+          if (userInput.length >= 2) {
+            return true;
+          } else {
+            console.log(`Please enter a name for the intern!`);
+            return false;
+          }
+        },
       },
       {
         type: 'input',
         name: 'id',
         message: "What is the intern's id?",
+        validate: (userInput) => {
+          if (userInput.length >= 1) {
+            return true;
+          } else {
+            console.log(`Please enter an ID for the intern!`);
+            return false;
+          }
+        },
       },
       {
         type: 'input',
         name: 'email',
         message: "What is the intern's email address?",
+        validate: (userInput) => {
+          if (userInput) {
+            return true;
+          } else {
+            console.log(`Please enter a valid e-mail address for the intern!`);
+            return false;
+          }
+        },
       },
       {
         type: 'input',
         name: 'school',
         message: "What is the intern's school?",
+        validate: (userInput) => {
+          if (userInput.length >= 2) {
+            return true;
+          } else {
+            console.log(
+              `Please enter a school/college/university for this intern!`
+            );
+            return false;
+          }
+        },
       },
       {
         type: 'list',
