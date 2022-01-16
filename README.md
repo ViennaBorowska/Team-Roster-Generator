@@ -37,6 +37,7 @@ Clone the repository from GitHub, open the project in a code editor e.g. VS Code
 ## Usage
 
 Navigate to the correct folder and run the index.js file in the command line to answer questions about your team.
+Below is a demonstration of this being completed following a succesful run of testing.
 <img src="Assets/Project-Demo.gif" alt="Demo video of how to run and use program - visual of tests being run in command line and passing 4/4. Then running index.js to initiate questions, and finally a HTML file is generated with colour-coded cards for each team member with information & contact detail links">
 
 ## Contributing
